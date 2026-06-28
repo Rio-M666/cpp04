@@ -1,33 +1,31 @@
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal():_type("Default")
 {
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "Animal default constructor called\n" << std::endl;
 }
-Animal::Animal(std::string type)
+Animal::Animal(std::string type):_type(type)
 {
-	_type = type;
-	std::cout << "Animal constructor called" << std::endl;
+	std::cout << "Animal constructor called\n" << std::endl;
 }
-Animal::Animal(const Animal &other)
+Animal::Animal(const Animal &other):_type(other._type)
 {
-	*this = other;
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called\n" << std::endl;
 }
 Animal &Animal::operator=(const Animal &other)
 {
 	_type = other._type;
-	std::cout << "Animal asignment copy constructor called" << std::endl;
+	std::cout << "Animal asignment copy constructor called\n" << std::endl;
 	return (*this);
 }
 Animal::~Animal()
 {
-	std::cout << "Animal deconstructor called" << std::endl;
+	std::cout << "Animal deconstructor called\n" << std::endl;
 }
 
 void Animal::makeSound() const
 {
-	std::cout << "Animal" << std::endl;
+	std::cout << "Animal\n" << std::endl;
 }
 std::string Animal::getType() const
 {
