@@ -1,14 +1,14 @@
 #include "Animal.hpp"
 
-Animal::Animal():_type("Default")
+Animal::Animal() : _type("Default")
 {
 	std::cout << "Animal default constructor called\n" << std::endl;
 }
-Animal::Animal(std::string type):_type(type)
+Animal::Animal(std::string type) : _type(type)
 {
 	std::cout << "Animal constructor called\n" << std::endl;
 }
-Animal::Animal(const Animal &other):_type(other._type)
+Animal::Animal(const Animal &other) : _type(other._type)
 {
 	std::cout << "Animal copy constructor called\n" << std::endl;
 }
